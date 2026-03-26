@@ -1,0 +1,113 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+#auth, #app {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #ffffff, #e6f0ff);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#profile, #settings {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#profile:hover, #settings:hover { transform: scale(1.2); }
+
+#habitList li {
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 10px;
+  list-style: none;
+  color: #fff;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  transition: transform 0.2s;
+}
+#habitList li:hover { transform: translateX(5px); }
+
+button {
+  padding: 6px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  background: linear-gradient(45deg, #36d1dc, #5b86e5);
+  color: white;
+  transition: transform 0.2s, opacity 0.2s;
+}
+button:hover { opacity: 0.85; transform: scale(1.05); }
+
+/* Progress Bar */
+.progress {
+  width: 100%;
+  background: #ddd;
+  height: 12px;
+  border-radius: 6px;
+  margin:6px 0;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 12px;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+  border-radius: 6px;
+  transition: width 0.3s;
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+body.dark #auth, body.dark #app {
+  background: linear-gradient(145deg, #1e1e1e, #2b2b2b);
+}
+body.dark #habitList li {
+  background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
+}
+
+/* Toast Notification */
+#toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #36d1dc, #5b86e5);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: none;
+  z-index: 1000;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+#footer {
+  text-align: center;
+  font-weight: bold;
+  color: #5b86e5;
+  margin-top: 20px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 600px){
+  #auth, #app { margin: 20px; padding: 15px; }
+  header h2 { font-size: 18px; }
+  #habitList li { font-size: 14px; padding: 10px; }
+  button { padding: 4px 8px; font-size: 14px; }
+  #habitInput { width: 70%; }
+}

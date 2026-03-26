@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Habit Tracker Final</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="auth">
+  <h2>Enter your name</h2>
+  <input type="text" id="username" placeholder="Your Name">
+  <button onclick="login()">Continue</button>
+</div>
+
+<!-- MAIN APP -->
+<div id="app" style="display:none;">
+  <header>
+    <div id="profile" onclick="openProfile()">👤</div>
+    <h2 id="welcome">Welcome</h2>
+    <div id="settings" onclick="openSettings()">⋮</div>
+  </header>
+
+  <input type="text" id="search" placeholder="Search habits...">
+
+  <div id="add-section">
+    <input type="text" id="habitInput" placeholder="New Habit">
+    <button onclick="addHabit()">+ Add</button>
+  </div>
+
+  <ul id="habitList"></ul>
+
+  <p id="footer">Habit Tracker by Devanshu Raj</p>
+
+  <button id="themeBtn" onclick="toggleTheme()">Toggle Dark/Light Theme</button>
+</div>
+
+<!-- Toast notification -->
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
